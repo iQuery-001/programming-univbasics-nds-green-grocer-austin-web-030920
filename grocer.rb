@@ -107,6 +107,7 @@ def checkout(cart, coupons)
   total = 0
   while cart_counter < final_cart.length do
     item_counter = 0
+    final_cart[cart_counter][:price].round(2)
     while item_counter < final_cart[cart_counter][:count] do
       sub_total += final_cart [cart_counter][:price]
       item_counter += 1
