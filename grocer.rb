@@ -120,7 +120,7 @@ def checkout(cart, coupons)
   end
   if sub_total > 100
     total = sub_total * 0.9
-    total =  total.round(2)
+    total = total.round(2)
   else
     total = sub_total
     total = total.round(2)
