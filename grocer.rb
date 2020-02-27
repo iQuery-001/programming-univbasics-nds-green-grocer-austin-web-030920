@@ -101,11 +101,11 @@ def checkout(cart, coupons)
   # * apply_coupons
   # * apply_clearance
   consolidated = consolidate_cart(cart)
-  # puts consolidated
+  puts consolidated
   couponed = apply_coupons(consolidated, coupons)
-  # puts couponed
+  puts couponed
   final_cart = apply_clearance(couponed)
-  # puts final_cart
+  puts final_cart
   cart_counter = 0
   sub_total = 0
   total = 0
@@ -120,13 +120,13 @@ def checkout(cart, coupons)
   end
   if sub_total > 100
     total = sub_total * 0.9
-    total = total.round(2)
+    # total.round(2)
   else
     total = sub_total
-    total = total.round(2)
+    # total.round(2)
   end
   #
   # BEFORE it begins the work of calculating the total (or else you might have
   # some irritated customers
-  total
+  total.round(2)
 end
